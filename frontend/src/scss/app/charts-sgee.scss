@@ -1,0 +1,21 @@
+#chartjs-tooltip {
+    opacity: 1;
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    color: white;
+    border-radius: 5px;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    font-size: 12px;
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    z-index: 99999;
+}
+.chartjs-tooltip-key {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 2px;
+}

@@ -1,0 +1,51 @@
+﻿<header class="app-header navbar">
+  <button class="navbar-toggler d-lg-none show-menu-lateral" type="button" appMobileSidebarToggler>&#9776;</button>
+  <ul class="nav navbar-nav d-md-down-none btn-side-menu show-menu-lateral">
+    <li class="nav-item">
+      <a class="nav-link navbar-toggler" href="#" appSidebarToggler>&#9776;</a>
+    </li>
+  </ul>
+  <a class="navbar-brand img-logo-start" href="#"></a>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item dropdown display-user-name d-sm-down-none" dropdown (onToggle)="toggled($event)">
+        <span class="display-icon-user"> User name here</span>
+    </li>
+    <li class="nav-item">
+      <a class="display-user-name" href="#"><span class="display-icon-exit"></span></a>
+    </li>
+  </ul>
+</header>
+
+<div class="app-body">
+    <div class="sidebar menu-lateral">
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <li class="nav-item link-menu-principal">
+                    <span>Menu Principal</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-menu-item" routerLinkActive="active" [routerLink]="['/movie']">Movies</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <main class="main">
+        <app-modal-message></app-modal-message>
+        <app-notifications></app-notifications>
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+            <app-breadcrumbs></app-breadcrumbs>
+        </ol>
+
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+</div>
+
+<footer class="app-footer">
+    TMDb v1.0
+</footer>

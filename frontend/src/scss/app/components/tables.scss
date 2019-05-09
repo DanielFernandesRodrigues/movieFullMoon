@@ -1,0 +1,19 @@
+.report-data-table {
+    .report-table-cell {
+        text-align: left;
+        white-space: initial;
+    }
+
+    .report-table-cell-totalization {
+        font-weight: bold;
+    }
+}
+
+.sgee-table-resizable.sgee-table-resizable {
+    thead > tr {
+        background-color: #dae8ef;
+        > th {
+            background: transparent;
+        }
+    }
+}

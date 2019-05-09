@@ -1,0 +1,24 @@
+<p-autoComplete
+#selector
+    inputStyleClass="form-control ie-remove-clear border-default"
+    styleClass="input-group sgee-autocomplete" 
+    [inputId]="inputId_" [field]="field_"
+    [maxlength]="maxlength_"
+    [emptyMessage]="emptyMessage_"
+    [placeholder]="placeholder_" 
+    [(ngModel)]="selected"
+    [size]="30"
+    [minLength]="3"
+    [suggestions]="filteredList"
+    [dropdown]="canShowDropdown()"
+    (onBlur)="onBlur_()"
+    (onFocus)="onFocus($event)"
+    (onSelect)="onSelect_()"
+    (completeMethod)="completeMethod_($event)"
+    (onKeyUp)="onKeyUp_($event)"
+    (ngModelChange)="changeInput($event)">
+    
+    <ng-template let-option pTemplate="item">
+        {{option.label}}
+    </ng-template>
+</p-autoComplete>

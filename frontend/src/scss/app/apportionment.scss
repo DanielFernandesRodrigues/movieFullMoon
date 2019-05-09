@@ -1,0 +1,126 @@
+.btn-apportionment{
+    font-size: 22px;
+    vertical-align: middle;
+    color: #8a8a8a;
+    width: 40px;
+    text-align: center;
+}
+
+.btn-apportionment:hover:enabled{
+    cursor: pointer;
+}
+
+.btn-add-apportionment{
+    color: #0070ff;
+    margin:0;
+    padding:0;
+}
+.btn-add-apportionment:hover:enabled{
+    color: #0070ff;
+}
+.btn-apportionment:focus:enabled{
+    color: #0070ff;
+}
+
+.btn-add-apportionment i{
+    font-weight: bold;
+    display: inline;
+    margin-top: 1px !important;
+}
+
+.btn-remove-apportionment{
+    color: #ff3d3d;
+    margin:0;
+    padding:0;
+}
+.btn-remove-apportionment:hover:enabled{
+    color: #ff3d3d;
+}
+.btn-remove-apportionment:focus:enabled{
+    color: #ff3d3d;
+}
+
+.btn-remove-apportionment i{
+    font-weight: bold;
+    display: inline;
+    margin-top: 1px !important;
+}
+
+.btn-save-apportionment{
+    color: #03c909;
+    margin:0;
+    padding:0;
+}
+.btn-save-apportionment:hover:enabled{
+    color: #03c909;
+}
+.btn-save-apportionment:focus:enabled{
+    color: #03c909;
+}
+
+.btn-save-apportionment i{
+    font-weight: bold;
+    display: inline;
+    margin-top: 1px !important;
+}
+
+.table-apportionment .ui-datatable-header{
+    padding: 5px 0px 0px 0px !important;   
+    border: none !important; 
+}
+
+.table-apportionment .ui-datatable{
+    border: 2px solid;
+    border-color: #E7E7E7;
+}
+
+.table-apportionment-main .ui-datatable{
+    border-color: #03c909;
+}
+
+.table-apportionment-on-edition .ui-datatable{
+    border-color: #ffd900;
+}
+
+.table-apportionment .ui-datatable .ui-datatable-tablewrapper{
+    padding: 1px !important;
+}
+
+.table-apportionment .ui-datatable-tablewrapper .form-control:not(.calendar-small-input){
+    padding: 4px 0px!important;    
+}
+
+.table-apportionment div.ui-dropdown .ui-dropdown-trigger span{
+    margin-top: .6em !important;
+}
+
+.table-apportionment .ui-datatable-header .ui-datepicker-trigger.ui-calendar-button{
+    height: 27px !important;
+    z-index: 1;
+}
+
+.table-header-sgee label{
+    height: 27px !important;
+}
+
+.table-apportionment .dp-popup.dp-material{
+    margin-top: 26px;
+}
+
+.label-header-table{
+    font-weight: bold;
+    color: #546e7a;
+}
+
+.input-percentage::-ms-clear {
+    display: none;
+}
+
+.field-incomplete{
+    color: $error-color-text-border;
+}
+
+.field-incomplete-border{
+    border-bottom: red solid 4px;
+    margin-top: 3px;
+}

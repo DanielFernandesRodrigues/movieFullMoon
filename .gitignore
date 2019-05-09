@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/config
+/.vs/movieMoon/v15
+/.vs/VSWorkspaceState.json
+/MovieMoon.DependencyInjection/bin/Debug/netcoreapp2.1
+/MovieMoon.DependencyInjection/obj
+/MovieMoon.Domain/bin/Debug/netcoreapp2.1
+/MovieMoon.Domain/obj
+/MovieMoon.Infrastructure/bin/Debug/netcoreapp2.1
+/MovieMoon.Infrastructure/obj
+/MovieMoon.Service/bin/Debug/netcoreapp2.1
+/MovieMoon.Service/obj
+/MovieMoon.WebApi/bin/Debug/netcoreapp2.1
+/MovieMoon.WebApi/obj
+/.vscode
+/out/chrome

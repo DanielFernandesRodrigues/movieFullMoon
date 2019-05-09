@@ -1,0 +1,31 @@
+.table-nucs-sgee .ui-expanded-row-content td{
+    padding: 0px !important;
+}
+
+.table-archives .ui-expanded-row-content{
+    border: 1px solid #D5D5D5 !important;
+    background: transparent !important;
+}
+
+.expanded-table-content-sgee tbody tr{
+    background: transparent !important;
+}
+
+.table-archives > .ui-datatable .ui-row-toggler{
+    width: 100% !important;
+}
+
+.table-archives .ui-state-default .ui-unselectable-text:not(.ui-sortable-column){
+    vertical-align: text-top;
+    padding-top: 0px;
+}
+
+.sgee-menu-popup-nucs{
+    left: 5px !important;
+    top: 41px !important;
+}
+
+.sgee-menu-popup-ucs{
+    left: 25px !important;
+    top: 82px !important;
+}

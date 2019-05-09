@@ -1,0 +1,30 @@
+<p-dialog [(header)]="modalMessageTitle" class="defaul-dialog" [(visible)]="modalMessageDisplay" [draggable]="false" [resizable]="false"
+    [modal]="true" (onShow)="onShowModal($event)" (onHide)="theBoundCallback()" (click)="modalClick($event)"
+    [closeOnEscape]="false" [dismissableMask]="true">
+    <div class="dialog-content">
+        <span style="font-weight:bold" [innerHTML]="modalMessageContent"></span>
+    </div>
+    <p-footer>
+        <button (keydown)="onTabPress($event)" id="modal-message-ok-btn" type="button" class="btn btn-primary" (click)="theBoundCallback();okClick($event);">
+            <i class="fa fa-check-square"></i>
+            OK
+        </button>
+    </p-footer>
+</p-dialog>
+
+<p-dialog [(header)]="dialogTitleQuestion" class="defaul-dialog" [(visible)]="displayDialogQuestion" [draggable]="false" [resizable]="false" 
+    [modal]="true" (onShow)="onShowModalQuestion($event)" (onHide)="displayDialogQuestion=false" (click)="modalClickQuestion($event)" [dismissableMask]="true">
+    <div class="dialog-content">
+        <span class="dialog-field" [innerHTML]="dialogMessageQuestion"></span>
+    </div>
+    <p-footer>
+        <button (keydown)="onTabPressQuestion($event)" id="modal-message-yes-btn" type="button" class="btn btn-primary" (click)="theBoundCallback();displayDialogQuestion=false">
+            <i class="fa fa-check-square"></i>
+            Sim
+        </button>
+        <button (keydown)="onTabPressQuestion($event)" id="modal-message-no-btn"  type="button" class="btn btn-primary" (click)="displayDialogQuestion=false">
+            <i  class="fa fa-exclamation-triangle"></i>
+            Não
+        </button>
+    </p-footer>
+</p-dialog>

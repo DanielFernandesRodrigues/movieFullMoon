@@ -1,0 +1,61 @@
+<p-dialog [(header)]="dialogTitle" class="defaul-dialog" [(visible)]="displayDialog" [draggable]="false" [resizable]="false" [modal]="true">
+    <div *ngIf="selectedMovie" class="dialog-content">
+        <div class="row">
+            <span><b>Name: </b>{{selectedMovie.title}}</span>
+        </div>
+        <div class="row">
+            <span><b>Genre: </b>{{selectedMovie.mainGenre}}</span>
+        </div>
+        <div class="row">
+            <span><b>Overview: </b>{{selectedMovie.overview}}</span>
+        </div>
+        <div class="row">
+            <span><b>Release Date: </b>{{selectedMovie.release_date}}</span>
+        </div>        
+        <div class="row">
+            <span style="width: 100%;height: 100px;
+                background-repeat: no-repeat;background-position: center;height: 200px;background-size: contain;"
+                [ngStyle]="getStyle(selectedMovie.poster_path)">
+            </span>
+        </div>
+    </div>
+</p-dialog>
+<div class="animated fadeIn">
+    <div class="content-header row">
+        <span class="content-title">{{title}}</span>
+    </div>
+    <div class="content-body">
+        <div class="card">
+            <div class="card-block" style="padding: 0.25rem">
+                <div class="row" style="width: 100%; margin: 0;">
+                    <p-dataTable #myCoolTable class="table-archives table-striped table-filter-headerdescription"
+                        [value]="movies" [emptyMessage]="emptyMsg" [rows]="20" (onLazyLoad)="onPage($event)"
+                        [lazy]="true" [loading]="false"
+                        [paginator]="true" [pageLinks]="5" [totalRecords]="result ? result.total_results : 0">
+                        <p-column header="Image" [sortable]="false">
+                            <ng-template let-col let-movie="rowData" pTemplate="body">                                
+                                <button style="width: 100%; display:inline-grid;" (click)="clickMovie(movie)">                                
+                                    <span style="height: 100px;background-repeat: no-repeat;background-position: center;"
+                                    [ngStyle]="getStyle(movie.backdrop_path)">
+                                    </span>
+                                </button>
+                            </ng-template>
+                        </p-column>
+                        <p-column header="Name" field="title" [sortable]="false">
+                        </p-column>
+                        <p-column header="Genre" field="mainGenre" [sortable]="false"
+                            [style]="{'width':'15%', 'text-align':'center'}">
+                        </p-column>
+                        <p-column header="Release Date" field="release_date" [sortable]="false"
+                            [style]="{'width':'15%', 'text-align':'center'}">
+                        </p-column>                        
+                        <p-footer *ngIf="!myCoolTable.isEmpty()">Exibindo de {{myCoolTable.first + 1}} a {{myCoolTable.rows + (myCoolTable.first) > myCoolTable.totalRecords
+                        ? myCoolTable.totalRecords : myCoolTable.rows + (myCoolTable.first) }} no total de {{ myCoolTable.totalRecords
+                        }}
+                        </p-footer>
+                    </p-dataTable>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

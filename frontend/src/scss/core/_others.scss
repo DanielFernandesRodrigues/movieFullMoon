@@ -1,0 +1,25 @@
+// scss-lint:disable QualifyingElement
+hr.transparent {
+  border-top: 1px solid transparent;
+}
+
+
+.flex-grow-1{
+  flex-grow: 1;
+}
+.flex-grow-1-2{
+  flex-grow: 0.5;
+}
+.flex-grow-1-3{
+  flex-grow: 0.33;
+}
+.flex-grow-1-4{
+  flex-grow: 0.25;
+}
+.flex-grow-1-5{
+  flex-grow: 0.2;
+}
+
+.flex-basis-0{
+  flex-basis: 0;
+}

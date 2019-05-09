@@ -1,0 +1,22 @@
+.ui-multiselect-header.ui-multiselect-header-no-toggleall .ui-multiselect-filter-container {
+width: 100%!important;
+}
+.sgee-select-multiselect.sgee-select-multiselect {
+    .ui-multiselect-panel{
+        min-width: 220px;
+        width: 100%;
+    
+        .ui-multiselect-item {
+            white-space: initial !important;
+        
+            label {
+                word-break: break-all;
+            }
+        }
+    }
+}
+
+
+.p-multiSelect-box {
+    max-width: 100%;
+}

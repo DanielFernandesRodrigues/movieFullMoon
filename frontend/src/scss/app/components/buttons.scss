@@ -1,0 +1,49 @@
+.sgee-btn {
+    color: #fff;
+    display: inline-block;
+    
+    &.btn-icon{
+        color: #8a8a8a;
+        width: 40px;
+        text-align: center;
+        padding: 0;
+        cursor: pointer;
+        transition: color .3s ease;
+
+        span {
+            font-size: 30px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:hover:enabled {
+            color: #00B1F2;
+        }
+    }
+
+    &.btn-alter{
+        width: 25px;
+        span {
+            display: block;
+            font-size: 23px;
+            transform: translateY(2px);
+        }
+    }
+
+    &:disabled {
+        background: #d4d4d4;
+        border-color: #d4d4d4;
+        cursor: default;
+    }
+}
+a.sgee-btn {
+    &:hover {
+        text-decoration: none;
+    }
+}
+.sgee-btn {
+    &:disabled:focus{
+        outline: 0;
+        box-shadow:0
+    }
+}

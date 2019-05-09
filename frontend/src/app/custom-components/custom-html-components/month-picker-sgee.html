@@ -1,0 +1,22 @@
+<div class="input-group calendar-sgee-group">
+    <input 
+    [disabled]="true"
+    [dpDayPicker]="config"
+    name="datePicker"
+    #dateDirectivePicker="dpDayPicker"
+    #dateDirectivePickerModel="ngModel"
+    theme="dp-material"
+    [mode]="mode"
+    [(ngModel)]="date"
+    style="height: 0px; margin: 0px; padding: 0px; border: 0; width: 0px;"
+    (ngModelChange)="valuechange($event)"/>
+    
+    <p-inputMask #maskDate [(ngModel)]="date" [mask]="mask"  (onComplete)="onComplete(maskDate)" (onBlur)="onBlur()"
+        class="form-control input-calendar-sgee-only-month {{styleInput}}" styleClass="calendar-only-month ie-remove-clear" inputId="{{inputId}}" [disabled]="disabled">
+    </p-inputMask>
+    
+    <button  (click)="open()" class="ui-datepicker-trigger ui-calendar-button ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only {{styleButton}}" [disabled]="disabled">
+        <span class="ui-button-icon-left ui-clickable fa fa-fw fa-calendar"></span>
+        <span class="ui-button-text ui-clickable">ui-btn</span>
+    </button>
+</div>

@@ -1,0 +1,147 @@
+.chart {
+    .chart-header {
+        .axis {
+            width: 40px;
+            font-weight:bold;
+            opacity:.7;
+        }
+        .left-axis{
+            color: rgb(89, 89, 89);
+        }
+        .right-axis{
+            color: rgb(79, 129, 189);
+        }
+        .title {
+            color: rgb(89, 89, 89);
+            font-size:15px; 
+            
+            .info-icon{
+                font-size: 15px;
+            }
+
+            @media all and (max-width: 1200px){
+                font-size: 13px;
+            }
+        }
+        .dates {
+            margin-left: 5px;
+            font-size: 12px;
+        }
+    }
+    .chart-catalog {
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+}
+.chart-gear {
+    span{
+        transition: transform .2s linear;
+    }
+    &.active{
+        span{
+            transform: rotate(-90deg);
+        }
+    }  
+}
+
+.chart-operational-failures{
+    .left-axis {
+        flex: 0 0 100%;
+        text-align: left;
+    margin-left: 5px;
+    }
+}
+
+.first-chart-label-cost{
+    .switch-input:checked {
+        & ~ .switch-handle {
+            background: rgb(255, 65, 50) !important;
+            border-color: rgb(255, 65, 50) !important;
+        }
+        & ~ .switch-label {
+            border-color: rgb(255, 65, 50);
+
+            &::after {
+                color: rgb(255, 65, 50);
+            }
+        }
+    }
+}
+
+.first-chart-label-consumption{
+    .switch-input:checked {
+        & ~ .switch-handle {
+            background: rgb(0, 175, 239) !important;
+            border-color: rgb(0, 175, 239) !important;
+        }
+        & ~ .switch-label {
+            border-color: rgb(0, 175, 239);
+
+            &::after {
+                color: rgb(0, 175, 239);
+            }
+        }
+    }
+}
+
+.excess-demand-label-left {
+    .switch-input:checked {
+        & ~ .switch-handle {
+            background: rgb(255, 65, 50) !important;
+            border-color: rgb(255, 65, 50) !important;
+        }
+        & ~ .switch-label {
+            border-color: rgb(255, 65, 50);
+
+            &::after {
+                color: rgb(255, 65, 50);
+            }
+        }
+    }
+}
+.excess-demand-label-right {
+    .switch-input:checked {
+        & ~ .switch-handle {
+            background: rgb(13, 85, 139) !important;
+            border-color: rgb(13, 85, 139) !important;
+        }
+        & ~ .switch-label {
+            border-color: rgb(13, 85, 139);
+
+            &::after {
+                color: rgb(13, 85, 139);
+            }
+        }
+    }
+}
+
+.chart-properties-switch.chart-properties-switch {
+    &:disabled {
+        ~ span {
+            opacity: .6;
+            cursor: auto;
+            background-color:rgba(0,0,0,.18);
+        }
+    }
+}
+
+#chartjs-tooltip {
+    opacity: 1;
+    position: absolute;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    border-radius: 3px;
+    -webkit-transition: all .1s ease;
+    transition: all .4s ease;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.chartjs-tooltip-key {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+}
