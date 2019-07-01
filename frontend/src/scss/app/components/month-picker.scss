@@ -1,0 +1,17 @@
+.calendar-sgee-group{
+    .dp-material {
+        > div:last-of-type:not(.dp-month-calendar-container):not(.dp-calendar-nav-container){
+            z-index: 1000;
+            right: inherit !important;
+            left: 0 !important;
+
+            @media (min-width: 768px ) {
+                transform: translatex(-20%);                
+            }
+
+            @media (min-width: 1200px){
+                transform: inherit;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<p-overlayPanel #panel [appendTo]="appendTo" [styleClass]="overpanelStyleClass" (onAfterHide)="panelHide()" (onAfterShow)="afterShow()">
+    <p-listbox #listSelector [styleClass]="listBoxClass" [listStyle]="{'max-height':'250px'}" (keyup)="onKeyUp($event)"
+        multiple="multiple" checkbox="checkbox" filter="filter"
+        [options]="listOptions" [showToggleAll]="false" [metaKeySelection]="false" [(ngModel)]="selectedList"
+        (onChange)="onChangeValue()">
+        <ng-template let-obj pTemplate="item">
+            <a href="javascript:void(0)" [ngClass]="obj.value && obj.value.active == false ? 'unactive-text sgee-multiselect-link' : 'sgee-multiselect-link'">
+                {{obj.label}}
+            </a>
+        </ng-template>
+    </p-listbox>
+</p-overlayPanel>
+<button #btnList [disabled]="!listOptions || listOptions.length == 0" (click)="click($event, btnList)" class="form-control ui-multiselect-label sgee-btn-listbox" [id]="inputId" type="button">
+    <span class="btn-listbox-text">{{defaultText}}</span>
+    <span class="icon fa fa-fw fa-caret-down ui-clickable"></span>
+</button>
